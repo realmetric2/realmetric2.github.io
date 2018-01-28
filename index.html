@@ -7,12 +7,20 @@
 
 </head>
 <body>
-lopa
 
-aa
+<section id="app">
+    Loading ...
+</section>
+
+
+<template id="groups">
+    {{#groups}}
+    <a href="aa">{{.}}</a><br>
+    {{/groups}}
+</template>
+
+
+<script src="/Library/mustache.min.js"></script>
 <script type="module" src="/init.js"></script>
-<script type="module" src="/config.js"></script>
-<script type="module" src="/Library/Router.js"></script>
-<script type="module" src="/Controllers/HomeController.js"></script>
 </body>
 </html>
