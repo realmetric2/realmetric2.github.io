@@ -1,8 +1,8 @@
-import HomeController from "./Controllers/HomeController.js";
+import GroupsController from "/Controllers/GroupsController.js";
 
 const Config = {
     'routes': [
-        ['/', HomeController]
+        ['/', GroupsController]
     ],
 };
 export default Config

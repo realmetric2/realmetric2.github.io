@@ -17,7 +17,8 @@ class Router {
     move() {
         let route = this.match();
         let controller = new route[1]();
-        controller.render();
+        let view = controller.render();
+        view.render();
     }
 
     match() {
