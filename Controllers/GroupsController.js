@@ -3,9 +3,11 @@ import GroupsView from '/Views/GroupsView.js'
 class GroupsController {
     // groups
 
-    render() {
-        this.loadGroups();
-        return new GroupsView(this.groups);
+    handle() {
+        location = '/login';
+
+        // this.loadGroups();
+        // return new GroupsView(this.groups);
     }
 
     loadGroups() {
