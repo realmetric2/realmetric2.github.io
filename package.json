@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "http-server -s -o -c-1"
+    "start": "ws --spa index.html --https"
   },
   "dependencies": {
-    "http-server": "^0.11.1"
+    "local-web-server": "^2.4.0"
   }
 }
