@@ -2,9 +2,11 @@ class Router {
     // routes
     // path
     // params
+    // services
 
-    constructor(routes) {
+    constructor(routes, services) {
         this.routes = routes;
+        this.services = services;
         this.path = window.location.pathname;
         this.params = window.location.search;
     }
@@ -16,7 +18,7 @@ class Router {
 
     move() {
         let route = this.match();
-        let controller = new route[1]();
+        let controller = new route[1](this.services);
         let view = controller.handle();
         view.render();
     }

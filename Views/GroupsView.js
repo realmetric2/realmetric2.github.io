@@ -1,7 +1,7 @@
 class GroupsView {
     // data
 
-    constructor(groups) {
+    init(groups) {
         this.data = [];
         this.data['groups'] = groups;
     }

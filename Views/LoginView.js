@@ -1,12 +1,15 @@
 import BaseView from "/Views/BaseView.js";
 
 class LoginView extends BaseView {
-    // data
     // template
 
-    constructor() {
-        super();
+    init() {
         this.template = 'login';
+        this.submit('#loginform', this.login());
+    }
+
+    login() {
+
     }
 }
 

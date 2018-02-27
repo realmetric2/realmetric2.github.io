@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<section id="app">
+<section id="container">
     Loading ...
 </section>
 
@@ -20,7 +20,11 @@
 </template>
 
 <template id="login-template">
-    login!
+    <form method="post">
+        <input name="login" required placeholder="login"><br>
+        <input name="token" required type="password" placeholder="token"><br>
+        <input type="submit">
+    </form>
 </template>
 
 

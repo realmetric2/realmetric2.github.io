@@ -1,8 +1,9 @@
+import BaseController from '/Controllers/BaseController.js';
 import LoginView from "/Views/LoginView.js";
 
-class LoginController {
+class LoginController extends BaseController {
     handle() {
-        return new LoginView();
+        return new LoginView(this.services);
     }
 }
 
