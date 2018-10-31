@@ -1,13 +1,33 @@
 import GroupsView from '/Views/GroupsView.js'
+import RmApi from '/Library/RmApi.js'
 
 class GroupsController {
     // groups
 
     handle() {
-        location = '/login';
+        let token = localStorage.getItem('token');
 
-        // this.loadGroups();
-        // return new GroupsView(this.groups);
+
+        let api = new RmApi('https://realmetric.mailfire.io/');
+        api.addHeader('Authorization', 'Basic ' + token);
+        api.get('metrics')
+            .then(function (data) {
+
+
+                GroupsView.data = function () {
+                    return {
+                        'test': 'shmest',
+                        'metrics': data.metrics,
+                    }
+                };
+                Vue.component('template-component', GroupsView);
+                let view = new Vue({
+                    el: '#app',
+                });
+
+
+            });
+
     }
 
     loadGroups() {

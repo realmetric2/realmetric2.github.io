@@ -1,10 +1,3 @@
-class GroupsView {
-    // data
-
-    init(groups) {
-        this.data = [];
-        this.data['groups'] = groups;
-    }
+export default {
+    template: '#groups-template',
 }
-
-export default GroupsView

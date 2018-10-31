@@ -20,7 +20,7 @@ class Router {
         let route = this.match();
         let controller = new route[1](this.services);
         let view = controller.handle();
-        view.render();
+        // view.render();
     }
 
     match() {

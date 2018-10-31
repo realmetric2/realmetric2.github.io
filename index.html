@@ -4,31 +4,29 @@
     <meta charset="utf-8">
     <title>Realmetric 2</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles.css"/>
 
 </head>
 <body>
 
-<section id="container">
-    Loading ...
-</section>
+<div id="app">
+    <template-component></template-component>
+</div>
 
+<template id="groups-template">
+    {{test}}
+    <div class="ac_weapper">
+        <div v-for="(data,group) in this.metrics">
 
-<template id="groups">
-    {{#groups}}
-    <a href="aa">{{.}}</a><br>
-    {{/groups}}
-</template>
-
-<template id="login-template">
-    <form method="post">
-        <input name="login" required placeholder="login"><br>
-        <input name="token" required type="password" placeholder="token"><br>
-        <input type="submit">
-    </form>
+            <div class="item_title">
+                <a v-bind:href="'/group/' + group">{{group}}</a>
+            </div>
+        </div>
+    </div>
 </template>
 
 
-<script src="/Library/mustache.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="module" src="/init.js"></script>
 </body>
 </html>
